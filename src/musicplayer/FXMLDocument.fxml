@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="569.0" style="-fx-background-color: #4E5750;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="musicplayer.FXMLDocumentController">
+    <children>
+      <ImageView fitHeight="392.0" fitWidth="569.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/2497.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="117.0" layoutY="174.0" prefHeight="148.0" prefWidth="377.0" text="Music Player" textAlignment="JUSTIFY" textFill="#171414">
+         <font>
+            <Font size="63.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ebebeb" />
+         </effect>
+      </Label>
+      <JFXButton fx:id="fileBtn" buttonType="RAISED" layoutX="396.0" layoutY="411.0" onAction="#handleFileAction" prefHeight="36.0" prefWidth="129.0" style="-fx-background-color: black;" text="Choose file..." textFill="WHITE" />
+      <JFXButton fx:id="playBtn" buttonType="RAISED" layoutX="21.0" layoutY="416.0" onAction="#handlePlayAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: white;" text="Play" />
+      <JFXButton fx:id="stopBtn" buttonType="RAISED" layoutX="118.0" layoutY="416.0" onAction="#handleStopAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: red;" text="Stop" textFill="WHITE" />
+      <JFXBadge layoutX="152.0" layoutY="481.0" prefHeight="25.0" prefWidth="364.0" style="-fx-border-radius: 5px; -fx-border-color: grey;">
+         <children>
+            <Label fx:id="filenameLabel" prefHeight="17.0" prefWidth="342.0" textFill="WHITE" />
+         </children>
+      </JFXBadge>
+      <JFXBadge layoutX="152.0" layoutY="517.0" prefHeight="25.0" prefWidth="111.0" style="-fx-border-color: grey; -fx-border-radius: 5px;">
+         <children>
+            <Label fx:id="statusLabel" prefHeight="17.0" prefWidth="105.0" style="-fx-border-radius: 5px;" textFill="WHITE" />
+         </children>
+      </JFXBadge>
+      <Label layoutX="28.0" layoutY="485.0" prefHeight="17.0" prefWidth="111.0" text="File name:" />
+      <Label layoutX="28.0" layoutY="521.0" prefHeight="17.0" prefWidth="89.0" text="Media status:" />
+      <Label layoutX="28.0" layoutY="553.0" prefHeight="17.0" prefWidth="69.0" text="Duration:" />
+      <Label fx:id="statusLabel1" layoutX="152.0" layoutY="553.0" prefHeight="17.0" prefWidth="122.0" style="-fx-border-radius: 5px; -fx-border-color: grey;" textFill="WHITE" />
+      <Label fx:id="durationLabel" layoutX="168.0" layoutY="557.0" prefHeight="17.0" prefWidth="89.0" />
+    </children>
+</AnchorPane>
